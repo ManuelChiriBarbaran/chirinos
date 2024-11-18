@@ -19,8 +19,26 @@ public class alumnoModel {
 
     @Column(name = "nombre")
     public String nombre;
-
-    @Column(name = "nota", columnDefinition = "DECIMAL(10,2)")
-   public BigDecimal nota;
+    @Column(name = "nota", nullable = false, precision = 10, scale = 2)
+    public BigDecimal nota;
+    public Integer getIdalumno() {
+        return idalumno;
+    }
+    public void setIdalumno(Integer idalumno) {
+        this.idalumno = idalumno;
+    }
+    public String getNombre() {
+        return nombre;
+    }
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    public BigDecimal getNota() {
+        return nota;
+    }
+    public void setNota(BigDecimal nota) {
+        this.nota = nota;
+    }
+    
 
 }
