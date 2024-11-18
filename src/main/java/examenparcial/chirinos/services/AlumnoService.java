@@ -24,7 +24,7 @@ public class AlumnoService implements IAlumnoService{
     }
 
     @Override
-    public boolean delete(int id) {
+    public boolean delete(int id){
         repository.deleteById(id);
         return true;    
     }
