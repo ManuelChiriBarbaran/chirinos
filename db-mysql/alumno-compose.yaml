@@ -1,0 +1,18 @@
+version: "1"
+
+services:
+  mysql:
+    image: mysql:8.0.26
+    container_name: db-mysql
+    restart: always
+    environment:
+    - MYSQL_ROOT_PASSWORD=Manuel@2024
+    ports:
+    - 3001:3306
+    - 33801:33060
+    networks:
+    - td2024chirinos
+    
+networks:
+  td2024chirinos:
+    name: parcial-chirinos
