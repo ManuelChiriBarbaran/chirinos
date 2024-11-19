@@ -7,7 +7,7 @@ public interface IAlumnoService {
 
     public alumnoModel add(alumnoModel model);
 
-    public alumnoModel update(alumnoModel model);
+    public alumnoModel update(int id, alumnoModel model);
 
     public boolean delete(int id);
 

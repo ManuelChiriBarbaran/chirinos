@@ -19,8 +19,11 @@ public class AlumnoService implements IAlumnoService{
     }
 
     @Override
-    public alumnoModel update(alumnoModel model) {
-        return repository.save(model);  
+    public alumnoModel update(int id, alumnoModel model) {
+        alumnoModel existente = findById(id);
+        existente.setNombre(model.getNombre());
+        existente.setNota(model.getNota());
+        return repository.save(existente);
     }
 
     @Override
